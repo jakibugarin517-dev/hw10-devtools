@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+  background: #f6efe0; /* warm desert sand */
+}
+
+header {
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  font-weight: bold;
+  color: #2b2d5b;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.pet-image-container {
+  padding: 10px;
+  text-align: center;
+}
+
+.pet-image {
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* script.js adds this class every click so he hops */
+.pet-image.bounce {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  40%      { transform: translateY(-25px) rotate(-4deg); }
+  70%      { transform: translateY(0) rotate(3deg); }
+}
+
+/* speech bubble w a lil tail pointing at him */
+.speech-bubble {
+  position: relative;
+  background: #fff;
+  border: 2px solid #2b2d5b;
+  border-radius: 14px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  max-width: 260px;
+  min-height: 44px;
+  font-style: italic;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-top-color: #2b2d5b;
+  border-bottom: 0;
+}
+
+.dashboard {
+  padding: 20px;
+  min-width: 330px;
+}
+
+.dashboard div {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* the happiness + energy bars */
+.bar {
+  width: 280px;
+  height: 14px;
+  background: #e8dccb;
+  border-radius: 7px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 7px;
+  transition: background 0.3s;
+}
+
+.happiness-bar { background: #e0a928; } /* gold */
+.energy-bar    { background: #2cb5b0; } /* turquoise */
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button-container button {
+  width: 105px;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 15px;
+  background-color: #2b2d5b;
+  border-color: #404853;
+  border-radius: 6px;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, rgba(246,246,246,.1) 0%, rgba(30,40,53,0) 66%);
+  color: #fafafa;
+}
+
+.button-container button:hover {
+  background-color: #43468a;
+}
+
+/* diary at the bottom */
+.log-section {
+  flex-basis: 100%;
+  padding: 0 10px;
+}
+
+#log {
+  max-width: 600px;
+  padding-left: 20px;
+}
+
+#log li {
+  margin-bottom: 5px;
+}
+
+/* ---- HW10 additions ---- */
+.feast-row {
+  margin-top: 14px;
+}
+.feast-row input {
+  width: 55px;
+  padding: 4px;
+}
+.feast-row button {
+  padding: 6px 12px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.lab-section {
+  flex-basis: 100%;
+  padding: 10px;
+  border-top: 2px dashed #2b2d5b;
+}
+.lab-help {
+  margin: 4px 0 10px;
+  font-style: italic;
+}
+.lab-group {
+  margin-bottom: 8px;
+}
+.lab-btn {
+  margin: 2px 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
