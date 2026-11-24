@@ -1,4 +1,4 @@
-# giga jackal 🐺 https://jakibugarin517-dev.github.io/Project-2/
+# giga jackal 🐺 [https://jakibugarin517-dev.github.io/Project-2/](https://jakibugarin517-dev.github.io/hw10-devtools/)
 
 this is my giga pet project for comp 484. its a lil virtual white jackal pup named Anubis. u can feed him, play w him, exercise him, or put him down for a nap and he literally talks back to u after every click.
 
